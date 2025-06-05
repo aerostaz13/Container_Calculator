@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulation d'empotage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1em;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    .message {
+      margin-top: 1em;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .message.adapte { background-color: #d4edda; color: #155724; }
+    .message.trop-petit { background-color: #f8d7da; color: #721c24; }
+    .message.trop-grand { background-color: #fff3cd; color: #856404; }
+  </style>
+</head>
+<body>
+  <h1>Simulation d'empotage</h1>
+
+  <!-- 1. Tableau des produits -->
+  <section id="section-produits">
+    <h2>Quantités des produits</h2>
+    <table id="table-produits">
+      <thead>
+        <tr>
+          <th>Référence</th>
+          <th>Nom</th>
+          <th>Poids unitaire (kg)</th>
+          <th>Volume unitaire (m³)</th>
+          <th>Quantité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Lignes injectées dynamiquement via main.js -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 2. Choix du conteneur -->
+  <section id="section-conteneurs">
+    <h2>Choix du conteneur</h2>
+    <label for="select-conteneur">Sélectionnez un conteneur :</label>
+    <select id="select-conteneur">
+      <option value="">-- Choisir un conteneur --</option>
+      <!-- Options injectées dynamiquement -->
+    </select>
+  </section>
+
+  <!-- 3. Bouton de calcul -->
+  <section id="section-action">
+    <button id="btn-calculer">Calculer l’adéquation</button>
+  </section>
+
+  <!-- 4. Zone de résultat -->
+  <section id="section-resultat">
+    <h2>Résultat</h2>
+    <div id="message-resultat"></div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
